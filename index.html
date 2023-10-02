@@ -1,11 +1,160 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Онлайн школа BrainWork</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link type="image/x-icon" href="/favicon-16x16.png" rel="shortcut icon">
+    <link type="Image/x-icon" href="/favicon-16x16.png" rel="icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: white;">BrainWork</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: white;" aria-current="page" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white;">О нас</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Platforms</a></li>
+                            <li><a class="dropdown-item" href="#">ENT</a></li>
+                            <li><a class="dropdown-item" href="#">Ielts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white;">Отзывы</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-lg" style="background-color: purple; color: white"><a href="#formalogin" style="color: white;">Войти</a></button>
+            </div>
+        </div>
+    </nav>
+<div class="first_block">
+    <h1> Choose your course</h1>
+    <h2>Unlimited Possibilities </h2>
+    <button type="button" class="btn btn-purple btn-xxl"><a href="#">Explore</a></button>
+</div>
+
+<div class="main" id="about">
+    <div class="main__container">
+
+        <div class="main__img--container">
+            <div class="main__img--card"><i class="fa-solid fa-chalkboard"></i></div>
+        </div>
+
+        <div class="main__content">
+            <h1>What do we do?</h1>
+            <h2>We help student to get free study</h2>
+            <p>Click on the button below to get more information.</p>
+            <button type="button" class="btn" style="background-color: purple;"><a href="#" style="color: white; font-family: 'Open Sans', sans-serif; font-size: 20px">Contact Us</a></button>
+        </div>
+    </div>
+</div>
+<div class="bsgrid">
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div class="col-6">
+            Lorem ipsum dolor sit.
+          </div>
+          <div class="col">
+            Lorem, ipsum dolor.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad.
+          </div>
+          <div class="col-5">
+            
+          </div>
+          <div class="col">
+            Lorem ipsum dolor sit amet consectetur.
+          </div>
+        </div>
+      </div>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="background-color: black">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.edgeip.com/images/FCK/Image/201812/Applying-to-university-college.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.theepochtimes.com/assets/uploads/2022/04/26/student-1200x800.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://staticsb.we.org/f/52095/6240x4160/d624181545/wwb-high-school-student.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Предыдущий</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Следующий</span>
+    </button>
+</div>
+
+<div id="formalogin" class="form-container-1" style="background-color: black" >    
+    <div class="container" style="background-color: black; padding-top: 120px">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="form-container">
+                    <h2>Login</h2>
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer__logo">
+        <a href="/" id="footer__logo">Zharmagambetov Rustem & Kuttybaev Daulet</a>
+    </div>
+    <p class="website__rights">©BrainWork</p>
+
+</div>
+
 </body>
 </html>
