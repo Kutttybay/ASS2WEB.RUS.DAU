@@ -1,0 +1,50 @@
+.video {
+    background-color: black;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+iframe {
+    width: 800px;
+    height: 500px;
+}
+
+.flashky {
+    background-color: black;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    margin-bottom: 0;
+}
+
+.progress {
+    padding-bottom: 200px;
+    background-color: black;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-bottom: 20px;
+}
+
+.btn-purple {
+    background-color: purple;
+    color: white;
+}
+
+#popoverButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
