@@ -141,22 +141,75 @@
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="footer__logo">
-        <a href="/" id="footer__logo">Zharmagambetov Rustem & Kuttybaev Daulet</a>
-    </div>
-    <p class="website__rights">©BrainWork</p>
 
+<div style="text-align: center; background-color: black; color: white;">
+    <button id="showHideButton">Ниндзя</button>
+    <div id="hiddenContent" class="hidden" style="margin-bottom: 40px;">
+        <p>Ниндзя или нет</p>
+    </div>
+
+    <button id="toggleAccordion">Затянуть или нет ? </button>
+    <div id="accordionContent" class="hidden">
+        <p>Бам и сюрприз</p>
+    </div>
 </div>
 
-<button id="popoverButton" type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="You must be registered">
-    Complain
-</button>
+
+
+<div style="text-align: center; background-color:black; color: white;">
+    <button id="showAlert">Показать оповещение</button>
+    <button id="showPrompt">Запросить ввод</button>
+    <button id="showConfirm">Запросить подтверждение</button>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+
+    document.getElementById("showHideButton").addEventListener("click", function() {
+        const hiddenContent = document.getElementById("hiddenContent");
+        if (hiddenContent.style.display === "none") {
+            hiddenContent.style.display = "block";
+        } else {
+            hiddenContent.style.display = "none";
+        }
+    });
+
+    document.getElementById("toggleAccordion").addEventListener("click", function() {
+        const accordionContent = document.getElementById("accordionContent");
+        if (accordionContent.style.display === "none") {
+            accordionContent.style.display = "block";
+        } else {
+            accordionContent.style.display = "none";
+        }
+    });
+
+
+    document.getElementById("showAlert").addEventListener("click", function() {
+        alert("Это оповещение о чем-то важном.");
+    });
+
+    document.getElementById("showPrompt").addEventListener("click", function() {
+        const userInput = prompt("Пожалуйста, введите ваш комментарий:");
+        if (userInput !== null) {
+            alert("Вы ввели следующий комментарий: " + userInput);
+        } else {
+            alert("Вы ничего не ввели.");
+        }
+    });
+
+    document.getElementById("showConfirm").addEventListener("click", function() {
+        const userConfirmed = confirm("Вы уверены, что хотите удалить этот файл?");
+        if (userConfirmed) {
+            alert("Файл удален.");
+        } else {
+            alert("Удаление отменено.");
+        }
+    });
+
+
     // Initialize the popover
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
