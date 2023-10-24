@@ -99,7 +99,6 @@ function startTimer() {
         }
     }, 1000);
 }
-
 document.getElementById("start-button").addEventListener("click", startTimer);
 
 
@@ -108,7 +107,6 @@ document.getElementById("start-button").addEventListener("click", startTimer);
 
 const content = document.getElementById("content");
 const toggleButton = document.getElementById("toggle-button");
-
 toggleButton.addEventListener("click", function() {
     if (content.style.display === "none") {
         content.style.display = "block";
@@ -121,7 +119,6 @@ toggleButton.addEventListener("click", function() {
 // Алерт
 
 const showAlertButton = document.getElementById("show-alert");
-
 showAlertButton.addEventListener("click", function() {
-    alert("Маладес, на тебе 100 баллов");
+    alert("Маладес!!!!");
 });
