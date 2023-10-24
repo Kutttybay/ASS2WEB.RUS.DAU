@@ -17,7 +17,7 @@
 
     <script src="index.js"></script>
     <script src="/index.js"></script>
-    
+
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -146,14 +146,16 @@
 </div>
 
 <div style="text-align: center; background-color: black; color: white;">
-    <button onclick="toggleText()">Показать/Скрыть текст</button>
-    <p id="hidden-text" class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eligendi vero ab esse, soluta nihil? Vel atque possimus quae doloribus illo cupiditate reiciendis voluptatem quam, iure nihil sunt neque distinctio!</p>
+    <button id="toggle-button">Переключить</button>
+    <div id="content" style="display: none;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="#">Ссылка</a>.
+    </div>
 </div>
 
 
 
 <div style="text-align: center; background-color:black; color: white;">
-    <button onclick="showAlert()">Сдать</button>
+    <button id="show-alert">Сдать задание</button>
 </div>
 
 

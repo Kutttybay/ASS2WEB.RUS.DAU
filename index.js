@@ -37,61 +37,91 @@ function toggleTask(index) {
 
 
 
+// Функция для валидации формы
+function validateForm(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const nameError = document.getElementById("name-error");
+    const emailError = document.getElementById("email-error");
 
-// Форма
-function validateForm() {
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    nameError.textContent = "";
+    emailError.textContent = "";
 
-    if (username.trim() === "" || email.trim() === "" || password.trim() === "") {
-        alert("Пожалуйста, заполните все обязательные поля.");
-        return false;
+    if (name.value.trim() === "") {
+        nameError.textContent = "Поле 'Имя' обязательно для заполнения";
     }
-    return true;
+
+    if (email.value.trim() === "") {
+        emailError.textContent = "Поле 'Email' обязательно для заполнения";
+    } else if (!validateEmail(email.value)) {
+        emailError.textContent = "Введите корректный email";
+    }
 }
 
+// Функция для валидации email
+function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+document.getElementById("my-form").addEventListener("submit", validateForm);
 
 
 // Таймер
 
+
 let timerInterval;
-let countdown = document.getElementById("countdown");
+let totalTime;
 
 function startTimer() {
-    const duration = parseInt(document.getElementById("duration").value);
-    if (!isNaN(duration) && duration > 0) {
-        let remainingTime = duration;
-        countdown.style.display = "block";
-
-        timerInterval = setInterval(function () {
-            countdown.innerText = remainingTime + " сек.";
-            remainingTime -= 1;
-
-            if (remainingTime < 0) {
-                clearInterval(timerInterval);
-                countdown.style.display = "none";
-                alert("Таймер завершился!");
-            }
-        }, 1000);
+    const minutes = parseInt(document.getElementById("minutes").value) || 0;
+    const seconds = parseInt(document.getElementById("seconds").value) || 0;
+    
+    if (minutes === 0 && seconds === 0) {
+        return;
     }
+
+    totalTime = minutes * 60 + seconds;
+    const timer = document.getElementById("timer");
+    let remainingTime = totalTime;
+    
+    timerInterval = setInterval(function() {
+        const minutes = Math.floor(remainingTime / 60);
+        const seconds = remainingTime % 60;
+        timer.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        remainingTime--;
+
+        if (remainingTime < 0) {
+            clearInterval(timerInterval);
+            timer.textContent = "Время вышло!";
+        }
+    }, 1000);
 }
+
+document.getElementById("start-button").addEventListener("click", startTimer);
 
 
 
 // Интерактив обьект 
 
-let textHidden = true;
-const hiddenText = document.getElementById("hidden-text");
+const content = document.getElementById("content");
+const toggleButton = document.getElementById("toggle-button");
 
-function toggleText() {
-    textHidden = !textHidden;
-    hiddenText.style.display = textHidden ? "none" : "block";
-}
+toggleButton.addEventListener("click", function() {
+    if (content.style.display === "none") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+});
 
 
 // Алерт
 
-function showAlert() {
-    alert("Маладец, ты сделал все !!!");
-}
+const showAlertButton = document.getElementById("show-alert");
+
+showAlertButton.addEventListener("click", function() {
+    alert("Маладес, на тебе 100 баллов");
+});

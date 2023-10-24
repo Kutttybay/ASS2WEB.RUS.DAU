@@ -121,24 +121,24 @@
 </section>
 
 <div style="text-align: center; background-color: black; margin-bottom: 30px">
-    <form id="registration-form" onsubmit="return validateForm()">
-        <label for="username">Имя пользователя:</label>
-        <input type="text" id="username" required>
-        <br>
+    <form id="my-form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <span id="name-error" class="error"></span>
+
         <label for="email">Email:</label>
-        <input type="email" id="email" required>
-        <br>
-        <label for="password">Пароль:</label>
-        <input type="password" id="password" required>
-        <br>
-        <button type="submit">Зарегистрироваться</button>
+        <input type="email" id="email" name="email" required>
+        <span id="email-error" class="error"></span>
+
+        <button type="submit">Отправить</button>
     </form>
 </div>
 
 <div style="text-align: center; background-color: black">
-    <label for="duration">Секундомер</label>
-    <input type="number" id="duration">
-    <button onclick="startTimer()">Начать</button>
+    <div id="timer">00:00</div>
+    <input type="number" id="minutes" placeholder="Минуты">
+    <input type="number" id="seconds" placeholder="Секунды">
+    <button id="start-button">Старт</button>
 </div>
 
 <footer>
